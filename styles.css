@@ -1,0 +1,61 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #d9d9a1;
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+    
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    border: 1px  white;
+   
+}
+.calculator-grid > button:hover{
+    background-color: rgba(50, 99, 70, 0.915);
+}
+.output{
+    grid-column: 1 / -1;
+    background-color: #fbfbfb;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand{
+    color: #282730;
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    color: #86b317;
+    font-size: 2.5rem;
+}
+.operator{
+    background-color: #282730;
+    color: #d9d9a1
+
+}
+.number{
+    color: #fff;
+    background-color: #262626;
+}
+.equal{
+    background-color: #86b317;
+}
